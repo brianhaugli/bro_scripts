@@ -9,9 +9,7 @@ module BEACON;
 global master_collection: table[addr,addr] of vector of time  &synchronized;
 
 export {
-    redef enum Notice::Type += {
-        Beacon_Log,
-};
+    redef enum Log::ID += { LOG };
     type Info: record {
         ts: time     &log;
         #id: conn_id  &log;
